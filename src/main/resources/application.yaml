@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: medibook-backend
+  datasource:
+    url: jdbc:postgresql://localhost:5432/medibookDB
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+server:
+  port: 8080
