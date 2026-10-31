@@ -35,7 +35,4 @@ public class Appointment {
 
     private String cancellationReason;
 
-
-
-
 }
