@@ -25,7 +25,7 @@ SELECT d.id,
        (CURRENT_DATE + days.day_offset) + TIME '09:00' + slots.n * INTERVAL '30 minutes',
     (CURRENT_DATE + days.day_offset) + TIME '09:30' + slots.n * INTERVAL '30 minutes'
 FROM doctor_profile d
-    CROSS JOIN generate_series(1, 3) AS days(day_offset)
+    CROSS JOIN generate_series(1, 14) AS days(day_offset)
     CROSS JOIN generate_series(0, 5) AS slots(n)
 WHERE d.license_number IN ('DEMO-001', 'DEMO-002')
 ON CONFLICT (doctor_id, start_at) DO NOTHING;
